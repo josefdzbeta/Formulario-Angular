@@ -1,4 +1,4 @@
-<form #heroForm="ngForm">
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
   <!-- {{ model | json }} -->
   <label for="name">Name</label>
   <input type="text" class="form-control" id="name"
@@ -24,5 +24,6 @@
       <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
     </select>
   </div>
-  <button type="button" class="btn btn-default" (click)="newHero()">Nuevo Héroe</button>
+  <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">Nuevo Héroe</button>
+  <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
 </form>
