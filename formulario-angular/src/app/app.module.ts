@@ -16,7 +16,7 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     AppComponent,
     HeroFormComponent
   ],
-  providers: [],
+  providers: [], 
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
