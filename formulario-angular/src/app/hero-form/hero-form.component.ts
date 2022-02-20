@@ -12,7 +12,7 @@ export class HeroFormComponent implements OnInit {
   }
 
   powers = [ 'Really Smart', 'Super Flexible', 'Super Hot', 'Weather Changer'];
-
+ 
   model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck OverStreet');
 
   submitted = false;
